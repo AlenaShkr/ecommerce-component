@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+  
+@font-face {
+    font-family: Bebas Neue;
+    src: url('./assets/fonts/bebasneue-book-webfont.woff2');
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+    background-color: #2B2A30;
+}
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

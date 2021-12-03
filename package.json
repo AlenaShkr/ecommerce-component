@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce-component",
+  "version": "1.0.0",
+  "description": "View the plates/menu options on the left side of the screen and add them to your cart on the right side.  \r When there are no plates within your cart, you should see a message that says, “Your cart is empty.”   \r When a plate is added to your cart, the Subtotal and Totals will automatically update.  \r When products are in your cart, you should be able to increase and decrease the quantity.  \r A user should not be able to mark the quantity as a negative number.  \r If the quantity goes down to 0, the user will have the option to delete or remove the product for their cart entirely.  \r Tax is based on the state of Tennessee sales tax: 0.0975",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlenaShkr/ecommerce-component.git"
+  },
+  "author": "AlenaShkr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlenaShkr/ecommerce-component/issues"
+  },
+  "homepage": "https://github.com/AlenaShkr/ecommerce-component#readme"
+}
