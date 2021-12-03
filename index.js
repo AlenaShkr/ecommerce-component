@@ -9,6 +9,10 @@ function render(menu) {
     img.src = menu[i].urlimage;
     img.className = 'img-dish';
     dish.appendChild(img);
+    const titleDish = document.createElement('p');
+    titleDish.textContent = menu[i].title;
+    titleDish.className = 'dish-title';
+    dish.appendChild(titleDish);
     const cost = document.createElement('p');
     cost.textContent = menu[i].cost;
     cost.className = 'cost';

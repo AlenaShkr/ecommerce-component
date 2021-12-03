@@ -3,9 +3,17 @@
 }
   
 @font-face {
-    font-family: Bebas Neue;
-    src: url('./assets/fonts/bebasneue-book-webfont.woff2');
+    font-family: Poppins Regular;
+    src: url('https://fonts.google.com/specimen/Poppins');
     font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Poppins Bold;
+    src: url('https://fonts.google.com/specimen/Poppins');
+    font-style: normal;
+    font-weight: 700;
 }
 
 body {
@@ -16,15 +24,23 @@ body {
 
 .wrapper {
     max-width: 1440px ;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: stretch;
+    overflow: hidden;
 
     background-color: #D7D7F9;
     background-image: url('assets/images/background.png');
     background-size: contain;
     background-repeat: repeat;
+}
+
+.list-dishes, .cards {
+    width: 40%;
+    background-color: #f7f7ff;
+    overflow-y: scroll;
 }
 
 .total-container {

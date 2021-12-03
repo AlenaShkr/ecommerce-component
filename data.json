@@ -2,19 +2,19 @@
     {
     "id": 1,
     "title": "French Fries with Ketchup",
-    "cost": "4.50",
+    "cost": "2.23",
     "urlimage": "assets/images/plate__french-fries.png"
 }, 
 {
     "id": 2,
     "title": "Salmon and Vegetables",
-    "cost": "4.50",
+    "cost": "5.12",
     "urlimage": "assets/images/plate__salmon-vegetables.png"
 },
 {
     "id": 3,
     "title": "Spaghetti with Meat Sauce",
-    "cost": "4.50",
+    "cost": "7.82",
     "urlimage": "assets/images/plate__spaghetti-meat-sauce.png"
 },
 {
