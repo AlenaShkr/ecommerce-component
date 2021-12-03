@@ -20,7 +20,7 @@ function render(menu) {
       menu[i].count = 1;
       cardList.push(menu[i]);
        renderCard(menu[i]);
-       addDishButton.className += ' disabled';
+       addDishButton.disabled = true;
       totalContainer.style.visibility = 'visible';
       const { sum, tax, total } = defineTotal(cardList);
       const subtotalValue = document.body.querySelector('.subtotal-value');
