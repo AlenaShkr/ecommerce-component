@@ -11,16 +11,13 @@
 body {
     width: 100%;
     height: 100vh;
-    display: flex;
-    
-    background-color: #2B2A30;
-}
-.wrapper {
-    max-width: 1280px;
     margin: 0 auto;
+}
 
+.wrapper {
+    max-width: 1440px ;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
 }
