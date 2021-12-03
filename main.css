@@ -20,6 +20,11 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+
+    background-color: #D7D7F9;
+    background-image: url('assets/images/background.png');
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 .total-container {

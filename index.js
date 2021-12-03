@@ -50,7 +50,7 @@ function defineTotal(data) {
 }
 
 function renderCard(data) {
-  const { title, cost, urlimage, count } = data;
+  let { title, cost, urlimage, count } = data;
   const cards = document.body.querySelector('.card-container');
   const card = document.createElement('div');
   card.className = 'card';
@@ -69,6 +69,7 @@ function renderCard(data) {
   const decreaseCount = document.createElement('button');
   decreaseCount.textContent = '<';
   decreaseCount.className = 'button-decrease-count';
+  
   card.appendChild(decreaseCount);
   const countCard = document.createElement('p');
   countCard.textContent = count;
@@ -76,7 +77,18 @@ function renderCard(data) {
   card.appendChild(countCard);
   const encreaseCount = document.createElement('button');
   encreaseCount.textContent = '>';
-  decreaseCount.className = 'button-encrease-count';
+  encreaseCount.className = 'button-encrease-count';
+  decreaseCount.addEventListener('click', () => { 
+    count = count - 1;
+    if (count === 0 ) {
+      decreaseCount.disabled = true;
+    }
+    countCard.textContent = count;
+   });
+  encreaseCount.addEventListener('click', () => { 
+    count = count + 1;
+    countCard.textContent = count;
+   });
   card.appendChild(encreaseCount);
   const summaryCard = document.createElement('p');
   summaryCard.textContent = count*cost;
