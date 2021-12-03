@@ -1,6 +1,7 @@
 function render(menu) {
   const cardList= [];
   const dishes = document.body.querySelector('.list-dishes');
+  const totalContainer = document.body.querySelector('.total-container');
   for (let i = 0; i < menu.length; i++) {
     const dish = document.createElement('div');
     dish.className = 'dish';
@@ -18,17 +19,39 @@ function render(menu) {
     addDishButton.addEventListener('click', () => { 
       menu[i].count = 1;
       cardList.push(menu[i]);
-      console.log(cardList);
        renderCard(menu[i]);
+       addDishButton.className += ' disabled';
+      totalContainer.style.visibility = 'visible';
+      const { sum, tax, total } = defineTotal(cardList);
+      const subtotalValue = document.body.querySelector('.subtotal-value');
+      subtotalValue.textContent = sum;
+      const taxValue = document.body.querySelector('.tax-value');
+      taxValue.textContent = tax;
+      const totalValue = document.body.querySelector('.total-value');
+      totalValue.textContent = total;
+
+      //  addDishButton.removeEventListener('click', () => {})
        })
     dish.appendChild(addDishButton);
     dishes.appendChild(dish);
   }
 }
 
+function defineTotal(data) {
+  let sum = 0;
+  const objTotal = {};
+  data.forEach(element => { sum += element.cost * element.count;
+    
+  });
+  objTotal.sum = sum;
+  objTotal.tax = Math.round(0.0975 * sum * 100) / 100;
+  objTotal.total = sum - Math.round(objTotal.tax * 100) / 100;
+  return objTotal;
+}
+
 function renderCard(data) {
   const { title, cost, urlimage, count } = data;
-  const cards = document.body.querySelector('.cards');
+  const cards = document.body.querySelector('.card-container');
   const card = document.createElement('div');
   card.className = 'card';
   const img = document.createElement('img');
@@ -55,6 +78,10 @@ function renderCard(data) {
   encreaseCount.textContent = '>';
   decreaseCount.className = 'button-encrease-count';
   card.appendChild(encreaseCount);
+  const summaryCard = document.createElement('p');
+  summaryCard.textContent = count*cost;
+  summaryCard.className = 'card-summary';
+  card.appendChild(summaryCard);
   cards.appendChild(card);
 
 }

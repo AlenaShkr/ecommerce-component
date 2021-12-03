@@ -21,3 +21,7 @@ body {
     justify-content: space-around;
     align-items: flex-start;
 }
+
+.total-container {
+    visibility: hidden;
+}
